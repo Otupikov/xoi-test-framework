@@ -1,0 +1,15 @@
+{
+  "name": "xoi-test-framework",
+  "version": "1.0.0",
+  "description": "This is test framework for the website XOi technologies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.5.0",
+    "cypress-real-events": "^1.14.0"
+  }
+}
