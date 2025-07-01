@@ -23,7 +23,7 @@ describe('XOi website smoke tests', () => {
     navigationPage.knowledgeHubNavigationItem()
     cy.get('@pageHeaderBlock').should('have.text', 'Field Service Knowledge Hub')
     navigationPage.companyNavigationItem()
-    cy.get('@pageHeaderBlock').should('have.text', 'About XOi')
+    cy.get('@pageHeaderBlock').should('have.text', 'About XOi888')//HERE ERROR - 888
     navigationPage.roiCalculatorNavigationItem()
     cy.get('.calculator-header-group')
       .find('h2')
