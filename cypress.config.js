@@ -18,6 +18,7 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      // const env = process.env.ENV;
       const file = config.env.configFile || 'test' //test or stage envs
       return getConfigurationByFile(file)
     },

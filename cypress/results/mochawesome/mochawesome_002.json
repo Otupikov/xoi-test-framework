@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-02T17:38:40.240Z",
+    "end": "2025-07-02T17:39:11.191Z",
+    "duration": 30951,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3178a3cb-851c-41be-b607-940388046174",
+      "title": "",
+      "fullFile": "cypress/e2e/xoi-test.spec.cy.js",
+      "file": "cypress/e2e/xoi-test.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "50119c53-5e5c-4139-a125-d127e079d5d7",
+          "title": "XOi website smoke tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "#T1 Click on each navigation item and verify each page is loaded successfully",
+              "fullTitle": "XOi website smoke tests #T1 Click on each navigation item and verify each page is loaded successfully",
+              "timedOut": null,
+              "duration": 7542,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_navigationPage.navigationPage.howXoiHelpsNavigationItem();\ncy.get('.wp-block-cover__inner-container').find('h2').as('pageHeaderBlock');\ncy.get('@pageHeaderBlock').should('have.text', 'Uncover Revenue Opportunities');\n_navigationPage.navigationPage.howXoiWorksNavigationItem();\ncy.get('@pageHeaderBlock').should('have.text', 'How XOi Works');\n_navigationPage.navigationPage.partnersNavigationItem();\ncy.get('@pageHeaderBlock').should('have.text', 'Integrations');\n_navigationPage.navigationPage.knowledgeHubNavigationItem();\ncy.get('@pageHeaderBlock').should('have.text', 'Field Service Knowledge Hub');\n_navigationPage.navigationPage.companyNavigationItem();\ncy.get('@pageHeaderBlock').should('have.text', 'About XOi');\n_navigationPage.navigationPage.roiCalculatorNavigationItem();\ncy.get('.calculator-header-group').find('h2').should('have.text', 'XOi Value Calculator');\n_navigationPage.navigationPage.contactUsNavigationItem();\ncy.get('h2.wp-block-heading').eq(0).should('have.text', ' Contact us for a personalized demo.');",
+              "err": {},
+              "uuid": "05752dd1-31ae-431c-b9a3-eb150233706a",
+              "parentUUID": "50119c53-5e5c-4139-a125-d127e079d5d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "#T2 Hover on each navigation item and verify expanded navigations and their headers",
+              "fullTitle": "XOi website smoke tests #T2 Hover on each navigation item and verify expanded navigations and their headers",
+              "timedOut": null,
+              "duration": 6307,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const navItemsNamesWithExpandableMenu = ['How XOi Helps', 'How XOi Works', 'Partners', 'Knowledge Hub', 'Company'];\nnavItemsNamesWithExpandableMenu.forEach(navElement => {\n  cy.wait(1000); //wait is just for demo\n  _navigationPage.navigationPage.hoverOnEachNavItem(navElement);\n  cy.get('.menu-item-copy').find('h2').contains(navElement).should('be.visible');\n  cy.contains('Contact Us').realHover(); //this is like unhover action\n});",
+              "err": {},
+              "uuid": "127be4da-0b07-4f58-8e73-23989de69d10",
+              "parentUUID": "50119c53-5e5c-4139-a125-d127e079d5d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "#T3 Verify \"How XOi Works\" page information blocks",
+              "fullTitle": "XOi website smoke tests #T3 Verify \"How XOi Works\" page information blocks",
+              "timedOut": null,
+              "duration": 1666,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_navigationPage.navigationPage.howXoiWorksNavigationItem();\n//Sub-header verification\ncy.get('h5.wp-block-heading').contains(' XOi is the hub in which every part of the job — from the field to the office — connects.').should('be.visible');\ncy.scrollPage(0, 500);\n//verify 'Collect' block\n_howItWorksPage.howItWorksPage.verifyBlockHeaderAndBlockSubHeaderDescriptionAreVisible('Collect', 'With XOi, techs easily collect essential job site data: asset information, issues found, fixes applied, and more');\ncy.scrollPage(500, 1500);\n//verify 'Connect' block\n_howItWorksPage.howItWorksPage.verifyBlockHeaderAndBlockSubHeaderDescriptionAreVisible('Connect', 'XOi provides the job information your team members need, exactly when they need it.');\ncy.scrollPage(1500, 2500);\n//verify 'Capitalize' block\n_howItWorksPage.howItWorksPage.verifyBlockHeaderAndBlockSubHeaderDescriptionAreVisible('Capitalize', 'XOi analyzes collected jobsite data to spark actions that improve your bottom line.');\ncy.scrollPage(2500, 3500);\n//verify 'Training & Support' block\n_howItWorksPage.howItWorksPage.verifyBlockHeaderAndBlockSubHeaderDescriptionAreVisible('Training & Support', 'Provide your Techs with a tool that gives them room to grow.');\ncy.scrollPage(3500, 4500);\n//verify 'A.I. Optimization' block\n_howItWorksPage.howItWorksPage.verifyBlockHeaderAndBlockSubHeaderDescriptionAreVisible('A.I. Optimization', 'For field service, the promise of revolutionary technology lies with the data that powers it.');",
+              "err": {},
+              "uuid": "0722c988-04f1-4c3e-ae87-6fb99067f769",
+              "parentUUID": "50119c53-5e5c-4139-a125-d127e079d5d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "#T4 ROI value calculator page verification",
+              "fullTitle": "XOi website smoke tests #T4 ROI value calculator page verification",
+              "timedOut": null,
+              "duration": 8711,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const businessTypes = ['Residential', 'Commercial', 'Both'];\nconst radioButtonsValues = ['10 - 50', '50 - 200', '200+'];\n_navigationPage.navigationPage.roiCalculatorNavigationItem();\nbusinessTypes.forEach(businessType => {\n  cy.wait(1000); //wait is just for demo\n  _roiCalculatorPage.roiCalculatorPage.clickOnEachBusinessTypeAndVerifyThatItsChosen(businessType);\n});\nradioButtonsValues.forEach(value => {\n  cy.wait(1000); //wait is just for demo\n  _roiCalculatorPage.roiCalculatorPage.clickEachTechQauntityRadioButtonAndVerifyItsChecked(value);\n});\n_roiCalculatorPage.roiCalculatorPage.fillUpRoiCalculationForm(firstName, lastName, \"Daily Bugle\", email);",
+              "err": {},
+              "uuid": "327f3e87-d5c8-40c7-bd16-25166ca7310b",
+              "parentUUID": "50119c53-5e5c-4139-a125-d127e079d5d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "#T5 Verify \"Contact us\" page",
+              "fullTitle": "XOi website smoke tests #T5 Verify \"Contact us\" page",
+              "timedOut": null,
+              "duration": 6478,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_navigationPage.navigationPage.contactUsNavigationItem();\n_contactUsPage.contactUsPage.verifyPageHeaderAndDescriptionAreVisible();\n_contactUsPage.contactUsPage.sendEmptyFormAndVerifyFieldsValidations();\n_contactUsPage.contactUsPage.verifyEmailFieldFormatValidation();\n_contactUsPage.contactUsPage.fillOutAndSendContactUsForm({\n  firstName: firstName,\n  lastName: lastName,\n  companyEmail: email,\n  phoneNumber: \"1234567890\",\n  companyName: \"Michael\",\n  jobTitle: \"Technician\",\n  numberOfTechs: \"15\",\n  location: \"Seattle\"\n});",
+              "err": {},
+              "uuid": "860d5b47-513a-43e0-b49f-bfec2f189165",
+              "parentUUID": "50119c53-5e5c-4139-a125-d127e079d5d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05752dd1-31ae-431c-b9a3-eb150233706a",
+            "127be4da-0b07-4f58-8e73-23989de69d10",
+            "0722c988-04f1-4c3e-ae87-6fb99067f769",
+            "327f3e87-d5c8-40c7-bd16-25166ca7310b",
+            "860d5b47-513a-43e0-b49f-bfec2f189165"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30704,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

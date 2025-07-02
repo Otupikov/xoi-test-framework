@@ -17,6 +17,7 @@ describe('XOi website smoke tests', () => {
     email = faker.internet.email()
   })
 
+  
   it('#T1 Click on each navigation item and verify each page is loaded successfully', () => {
     navigationPage.howXoiHelpsNavigationItem()
     cy.get('.wp-block-cover__inner-container')
