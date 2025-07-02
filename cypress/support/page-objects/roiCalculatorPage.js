@@ -10,7 +10,7 @@ export class RoiCalculatorPage {
     }
 
     clickEachTechQauntityRadioButtonAndVerifyItsChecked(value) { 
-        cy.get(`input[name='number-of-techs-employed'][value='${value}']`).click({force:true})
+        cy.get(`input[name='number-of-techs-employed'][value='${value}']`).click({ force:true })
         cy.get('label')
             .find(`input[name='number-of-techs-employed'][value='${value}']`)
             .parent('label')
@@ -18,12 +18,12 @@ export class RoiCalculatorPage {
             .should('have.css', 'border-color', 'rgb(0, 175, 215)')
     }
 
-    fillUpRoiCalculationForm(firstName,lastName,companyName,email) {
+    fillUpRoiCalculationForm(firstName, lastName, companyName, email) {
         cy.get('[name="firstname"]').type(firstName)
         cy.get('[name="lastname"]').type(lastName)
         cy.get('[name="company"]').type(companyName)
         cy.get('[name="email"]').type(email)
-        // cy.contains('Get Your Results').click() - 
+        // cy.contains('Get Your Results').click()
     }
 }
 

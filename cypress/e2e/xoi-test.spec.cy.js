@@ -10,7 +10,7 @@ describe('XOi website smoke tests', () => {
     cy.visit('/')
   })
 
-  it('#T1 Click on each navigation item and verify each page header', () => {
+  it('#T1 Click on each navigation item and verify each page is loaded successfully', () => {
     navigationPage.howXoiHelpsNavigationItem()
     cy.get('.wp-block-cover__inner-container')
       .find('h2')
@@ -32,7 +32,7 @@ describe('XOi website smoke tests', () => {
     cy.get('h2.wp-block-heading').eq(0).should('have.text', ' Contact us for a personalized demo.')
   })
 
-  it('#T2 Hover on each navigation item and verify expanded menu headers', () => {
+  it('#T2 Hover on each navigation item and verify expanded navigations and their headers', () => {
     const navItemsNamesWithExpandableMenu = ['How XOi Helps', 'How XOi Works', 'Partners', 'Knowledge Hub', 'Company'];
     navItemsNamesWithExpandableMenu.forEach(navElement => {
       cy.wait(1000) //wait is just for demo
@@ -76,8 +76,6 @@ describe('XOi website smoke tests', () => {
       roiCalculatorPage.clickEachTechQauntityRadioButtonAndVerifyItsChecked(value)
     })
     roiCalculatorPage.fillUpRoiCalculationForm("Peter","Parker","Daily Bugle","parker@spider-man.com")
-
-    //ТУТ ЩЕ НАДА БУДЕ ПОГРАТИСЯ З ТИМИ ПЕРЕТЯГУВАННЯМИ
   })
 
   it('#T5 Verify "Contact us" page', () => {
