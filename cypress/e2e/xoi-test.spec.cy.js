@@ -1,13 +1,20 @@
 import 'cypress-real-events/support';
+import { faker } from '@faker-js/faker'
 import { navigationPage } from '../support/page-objects/navigationPage.js'
 import { howItWorksPage } from '../support/page-objects/howItWorksPage.js'
 import { roiCalculatorPage } from '../support/page-objects/roiCalculatorPage.js'
 import { contactUsPage } from '../support/page-objects/contactUsPage.js'
 
+let firstName, lastName, email
+
+
 describe('XOi website smoke tests', () => {
 
   beforeEach(() => {
     cy.visit('/')
+    firstName = faker.person.firstName()
+    lastName = faker.person.lastName()
+    email = faker.internet.email()
   })
 
   it('#T1 Click on each navigation item and verify each page is loaded successfully', () => {
@@ -75,7 +82,7 @@ describe('XOi website smoke tests', () => {
       cy.wait(1000) //wait is just for demo
       roiCalculatorPage.clickEachTechQauntityRadioButtonAndVerifyItsChecked(value)
     })
-    roiCalculatorPage.fillUpRoiCalculationForm("Peter","Parker","Daily Bugle","parker@spider-man.com")
+    roiCalculatorPage.fillUpRoiCalculationForm(firstName, lastName, "Daily Bugle", email)
   })
 
   it('#T5 Verify "Contact us" page', () => {
@@ -84,12 +91,12 @@ describe('XOi website smoke tests', () => {
     contactUsPage.sendEmptyFormAndVerifyFieldsValidations()
     contactUsPage.verifyEmailFieldFormatValidation()
     contactUsPage.fillOutAndSendContactUsForm({
-      firstName: "Michael",
-      lastName: "Jackson",
-      companyEmail: "billieJean@emailj.com",
+      firstName: firstName,
+      lastName: lastName,
+      companyEmail: email,
       phoneNumber: "1234567890",
       companyName: "Michael",
-      jobTitle: "Artist",
+      jobTitle: "Technician",
       numberOfTechs: "15",
       location: "Seattle"
     })
