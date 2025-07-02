@@ -33,6 +33,7 @@ export class NavigationPage {
     }
 
     // hover on navigation items
+    
     hoverOnEachNavItem(navItemName) { 
         cy.get('#primary-menu-list').find('li').contains(navItemName).realHover()
     }
