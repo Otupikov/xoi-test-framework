@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://xoi.io/",
+    "env":{
+        "username": "testEnvUser@xoi.io.com",
+        "password": "testEnvPass"
+    }
+}

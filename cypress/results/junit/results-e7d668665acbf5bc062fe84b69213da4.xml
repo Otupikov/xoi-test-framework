@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="29.755" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-07-02T01:12:28" tests="0" file="cypress/e2e/xoi-test.spec.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="XOi website smoke tests" timestamp="2025-07-02T01:12:28" tests="5" time="29.754" failures="0">
+    <testcase name="XOi website smoke tests #T1 Click on each navigation item and verify each page is loaded successfully" time="6.828" classname="#T1 Click on each navigation item and verify each page is loaded successfully">
+    </testcase>
+    <testcase name="XOi website smoke tests #T2 Hover on each navigation item and verify expanded navigations and their headers" time="6.280" classname="#T2 Hover on each navigation item and verify expanded navigations and their headers">
+    </testcase>
+    <testcase name="XOi website smoke tests #T3 Verify &quot;How XOi Works&quot; page information blocks" time="1.610" classname="#T3 Verify &quot;How XOi Works&quot; page information blocks">
+    </testcase>
+    <testcase name="XOi website smoke tests #T4 ROI value calculator page verification" time="8.531" classname="#T4 ROI value calculator page verification">
+    </testcase>
+    <testcase name="XOi website smoke tests #T5 Verify &quot;Contact us&quot; page" time="6.236" classname="#T5 Verify &quot;Contact us&quot; page">
+    </testcase>
+  </testsuite>
+</testsuites>

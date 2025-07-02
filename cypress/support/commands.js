@@ -24,6 +24,19 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('loginIntoTheApplication',() => {
+    const userCredentials = {
+        "user": {
+            "email": Cypress.env('username'),
+            "password": Cypress.env('password')
+        }
+    }
+    cy.visit(Cypress.env('baseUrl'))
+    cy.get('.login-input').type(userCredentials.user.email)
+    cy.get('.password-input').type(userCredentials.user.password)
+    cy.contains('Sign in').click()
+})
+
 Cypress.Commands.add('scrollPage', (x = 0, y = 'bottom') => { 
     cy.scrollTo(x, y)
 })  

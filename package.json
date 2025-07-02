@@ -4,12 +4,20 @@
   "description": "This is test framework for the website XOi technologies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delete:reports": "rm -r cypress/results/* || true",
+    "prereport": "npm run delete:reports"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^14.5.0",
-    "cypress-real-events": "^1.14.0"
+    "cypress-multi-reporters": "^2.0.5",
+    "cypress-real-events": "^1.14.0",
+    "junit-merge": "^2.0.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

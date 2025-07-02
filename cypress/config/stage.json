@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://xoi.stage.io",
+    "env":{
+        "username": "stageEnvUser@xoi.io.com",
+        "password": "stageEnvPass"
+    }
+}
